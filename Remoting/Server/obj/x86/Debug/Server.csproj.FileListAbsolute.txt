@@ -1,0 +1,5 @@
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\Remoting\Server\bin\Debug\ConsoleApplication.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\Remoting\Server\bin\Debug\ConsoleApplication.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\Remoting\Server\obj\x86\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\Remoting\Server\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\Remoting\Server\obj\x86\Debug\ConsoleApplication.pdb
