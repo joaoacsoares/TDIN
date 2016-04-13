@@ -9,28 +9,29 @@ using System.Windows;
 using System.Text;
 
 
-
 class Client{
     
-    private EventIntermediate inter;
-    private IOrders ordersList;
+    private static EventIntermediate inter ;
+    private static IOrders ordersList;
+    //private Client run;
 
-    Client() {
-       // Text = "Preparation Room";
-        try
-        {
-            RemotingConfiguration.Configure("Client.exe.config", false);
-            ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
-            ordersList.AddingOrder += inter.FireAddingOrder;
-            ordersList.PreparingOrder += inter.FirePreparingOrder;
-            ordersList.ReadyOrder += inter.FireReadyOrder;
+    //Client() {
+    //   // Text = "Preparation Room";
+    //    try
+    //    {
+    //        RemotingConfiguration.Configure("Client.exe.config", false);
+    //        inter = new EventIntermediate();
+    //        ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
+    //        ordersList.AddingOrder += inter.FireAddingOrder;
+    //        //ordersList.PreparingOrder += inter.FirePreparingOrder;
+    //        //ordersList.ReadyOrder += inter.FireReadyOrder;
 
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Console.WriteLine(ex.Message);
+    //    }
+    //}
 
     public object InitializeLifetimeService()
     {
@@ -40,7 +41,14 @@ class Client{
 
     static void Main(string[] args)
     {
-        //correr o client
+
+
+        RemotingConfiguration.Configure("Client.exe.config", false);
+        inter = new EventIntermediate();
+        ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
+        ordersList.AddingOrder += inter.FireAddingOrder;
+        //ordersList.PreparingOrder += inter.FirePreparingOrder;
+        //ordersList.ReadyOrder += inter.FireReadyOrder;
 
     }
 }

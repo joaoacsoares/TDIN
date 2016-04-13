@@ -8,7 +8,9 @@ using System.Text;
 
 public class TableOrders : MarshalByRefObject
 {
-    private List<Order> AOrders;
+    private List<Order> AllOrders = new List<Order>();
+    private List<Order> AllOrders1 = new List<Order>();
+    private List<Order> AllOrders2 = new List<Order>();
     public event AddOrderEventHandler AddingOrder;
     public event PreparingOrderEventHandler PreparingOrder;
     public event ReadyOrderEventHandler ReadyOrder;
@@ -29,8 +31,8 @@ public class TableOrders : MarshalByRefObject
     public void Add(int i, int idC, string name, int qt, float preco, int status, int resp)
     {
         Order nO = new Order(i, idC, name," ", qt, preco, 0, resp);
-        nO.id = AOrders.Count + 1;
-        AOrders.Add(nO);
+        nO.id = AllOrders.Count + 1;
+        AllOrders.Add(nO);
         AddingOrder();
         Console.WriteLine("[Add] called.");
     }
@@ -39,8 +41,8 @@ public class TableOrders : MarshalByRefObject
     {
         List<Order> result = new List<Order>();
 
-        foreach (Order or in AOrders)
-            if (or.client.name == name)
+        foreach (Order or in AllOrders)
+            if (or.customer.name == name)
                 result.Add(or);
         Console.WriteLine("[GetCostumerOrders] called.");
         return result;
@@ -49,27 +51,27 @@ public class TableOrders : MarshalByRefObject
     public List<Order> GetAllOrders()
     {
         Console.WriteLine("[GetAllOrders] called.");
-        return AOrders;
+        return AllOrders;
 
     }
 
     public List<Order> GetOrdedOrders()
     {
         Console.WriteLine("[GetOrdedOrders] called.");
-        return AOrders.FindAll(x => x.status == 0);
+        return AllOrders.FindAll(x => x.status == 0);
            
     }
 
     public List<Order> GetReadyOrders()
     {
         Console.WriteLine("[GetReadyOrders] called.");
-        return AOrders.FindAll(x => x.status == 1);
+        return AllOrders.FindAll(x => x.status == 1);
     }
 
     public List<Order> GetDeliveringOrders()
     {
         Console.WriteLine("[GetDeliveringOrders] called.");
-        return AOrders.FindAll(x => x.status == 2);
+        return AllOrders.FindAll(x => x.status == 2);
     }
 
 
@@ -77,21 +79,15 @@ public class TableOrders : MarshalByRefObject
     public void setOrderPreparing(string t)
     {
 
-        AOrders.Find(x => x.id == Convert.ToInt32(t)).status = 0;
+        AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 1;
         PreparingOrder();
-        AOrders.Find(x => x.id == Convert.ToInt32(t)).client.timestamp = DateTime.Now;
-    }
-
-    public void setOrderReady(string t)
-    {
-        AOrders.Find(x => x.id == Convert.ToInt32(t)).status = 1;
-        ReadyOrder();
+        AllOrders.Find(x => x.id == Convert.ToInt32(t)).customer.timestamp = DateTime.Now;
     }
 
 
     public void setOrderDone(string t)
     {
-        AOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
+        AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
     }
 
 }

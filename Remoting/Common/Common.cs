@@ -9,13 +9,13 @@ public delegate void DeliveringOrderEventHandler();
 public delegate void FinalizingOrderEventHandler();
 
 [Serializable]
-public class Client {
+public class Customer {
     public DateTime timestamp;
 
     public int id { get; set; }
     public string name { get; set; }
 
-    public Client(int i, string n)
+    public Customer(int i, string n)
     {
         id = i;
         name = n;
@@ -32,7 +32,7 @@ public class Order
     public String description { get; set; }
     public int quantity { get; set; }
     public float price { get; set; }
-    public Client client { get; set; }
+    public Customer customer { get; set; }
 
     /*
     *  0 - kitchen | 1 - bar | 2 - both
