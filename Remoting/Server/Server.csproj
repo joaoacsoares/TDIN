@@ -47,14 +47,13 @@
     <Content Include="RemObj.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="RemObj.cs" />
     <Compile Include="Server.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Server.exe.activated" />
     <None Include="Server.exe.config" />
-    <None Include="Server.exe.singlecall" />
-    <None Include="Server.exe.singleton" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

@@ -44,15 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="RemObj.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Client.exe.activated" />
     <None Include="Client.exe.config" />
-    <None Include="Client.exe.singlecall" />
-    <None Include="Client.exe.singleton" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Order.dll" />
     <Content Include="Readme.txt" />
     <Content Include="RemObj.dll" />
   </ItemGroup>
