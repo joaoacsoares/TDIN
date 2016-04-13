@@ -40,7 +40,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
@@ -52,7 +51,6 @@
       <Project>{f92850a9-6762-4b5a-8d29-c8637a538710}</Project>
       <Name>Remotes</Name>
     </ProjectReference>
-=======
     <Compile Include="MenuItem.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="RemObj.cs" />
@@ -60,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Server.exe.config" />
->>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
