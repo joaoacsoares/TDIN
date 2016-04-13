@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+<<<<<<< HEAD
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,18 @@
       <Project>{337046fb-39a0-4f45-9c91-be4ee45f4670}</Project>
       <Name>Common</Name>
     </ProjectReference>
+=======
+    <Compile Include="Order.cs" />
+    <Compile Include="RemObj.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Order.dll" />
+    <Content Include="Readme.txt" />
+    <Content Include="RemObj.dll" />
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
