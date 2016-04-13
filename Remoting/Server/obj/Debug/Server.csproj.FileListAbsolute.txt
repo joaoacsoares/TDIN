@@ -1,0 +1,10 @@
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Server.exe.config
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Server.exe
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Server.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Common.dll
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Remotes.dll
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Common.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Debug\Remotes.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.exe
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.pdb
