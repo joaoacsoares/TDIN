@@ -13,10 +13,10 @@ namespace Remotes
         private List<Order> AllOrders = new List<Order>();
         private List<Order> AllOrders1 = new List<Order>();
         private List<Order> AllOrders2 = new List<Order>();
-        public event AddOrderEventHandler AddingOrder;
+        /*public event AddOrderEventHandler AddingOrder;
         public event PreparingOrderEventHandler PreparingOrder;
         public event ReadyOrderEventHandler ReadyOrder;
-        public event FinalizingOrderEventHandler FinalizingOrder;
+        public event FinalizingOrderEventHandler FinalizingOrder;*/
 
 
         public static TableOrders to;
@@ -39,6 +39,12 @@ namespace Remotes
 
         }
 
+        public List<Order> GetPendingOrders()
+        {
+            Console.WriteLine("[GetPendingOrders] called.");
+            return AllOrders.FindAll(x => x.status == 0);
+        }
+
         public List<Order> GetPreparingOrders()
         {
             Console.WriteLine("[GetPreparingOrders] called.");
@@ -55,18 +61,27 @@ namespace Remotes
 
         public void setOrderPreparing(string t)
         {
-
-            AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 1;
-            PreparingOrder();
-
-
+            string[] words = t.Split('/');
+            AllOrders.Find(x => x.name == words[0]).status = 1;
+            //PreparingOrder();
         }
 
 
         public void setOrderReady(string t)
         {
-            AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
+            string[] words = t.Split('/');
+            AllOrders.Find(x => x.name == words[0]).status = 2;
+            //ReadyOrder();
         }
+
+        public void setOrderDone(string t)
+        {
+            string[] words = t.Split('/');
+            AllOrders.Find(x => x.name == words[0]).status = 3;
+            //FinalizingOrder();
+        }
+
+
         public void Add(string name, string description, int quant, int table, float price, string resp) 
         {
             int i = 0;

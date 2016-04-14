@@ -11,3 +11,16 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Din
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csproj.GenerateResource.Cache
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\DiningRoom\obj\Debug\DiningRoom.exe
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\DiningRoom\obj\Debug\DiningRoom.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\DiningRoom.exe.config
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\DiningRoom.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\DiningRoom.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\Common.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\Remotes.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\Common.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\bin\Debug\Remotes.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.Form1.resources
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.Properties.Resources.resources
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csproj.GenerateResource.Cache

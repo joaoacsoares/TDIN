@@ -11,3 +11,16 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Kit
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\KitchenBar\obj\Debug\KitchenBar.exe
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\KitchenBar\obj\Debug\KitchenBar.pdb
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\KitchenBar\obj\Debug\KitchenBar.Form1.resources
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\KitchenBar.exe.config
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\KitchenBar.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\KitchenBar.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\Common.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\Remotes.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\Common.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\bin\Debug\Remotes.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.Form1.resources
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.Properties.Resources.resources
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\KitchenBar\obj\Debug\KitchenBar.csproj.GenerateResource.Cache

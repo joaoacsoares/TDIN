@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace Common
 {
     //Delegates
-    public delegate void AddOrderEventHandler();
+   /* public delegate void AddOrderEventHandler();
     public delegate void PreparingOrderEventHandler();
     public delegate void ReadyOrderEventHandler();
-    public delegate void FinalizingOrderEventHandler();
+    public delegate void FinalizingOrderEventHandler();*/
 
 
 
@@ -48,13 +48,14 @@ namespace Common
     public interface IOrders
     {
 
-        event AddOrderEventHandler AddingOrder;
+       /* event AddOrderEventHandler AddingOrder;
         event PreparingOrderEventHandler PreparingOrder;
         event ReadyOrderEventHandler ReadyOrder;
-        event FinalizingOrderEventHandler FinalizingOrder;
+        event FinalizingOrderEventHandler FinalizingOrder;*/
 
         void Add(string name, string description, int quant, int table, float price, string resp);
         List<Order> GetAllOrders();
+        List<Order> GetPendingOrders();
         List<Order> GetPreparingOrders();
         List<Order> GetReadyOrders();
         void setOrderPreparing(string t);
@@ -63,7 +64,7 @@ namespace Common
 
     }
 
-    public class EventIntermediate : MarshalByRefObject
+   /* public class EventIntermediate : MarshalByRefObject
     {
         public event AddOrderEventHandler AddingOrder;
         public event PreparingOrderEventHandler PreparingOrder;
@@ -92,5 +93,5 @@ namespace Common
             return null;
         }
 
-    }
+    }*/
 }

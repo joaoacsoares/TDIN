@@ -18,3 +18,13 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Ser
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Server\bin\Debug\Common.pdb
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Server\bin\Debug\Remotes.pdb
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Server.exe.config
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\obj\Debug\Server.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\obj\Debug\Server.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Server.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Server.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Common.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Remotes.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Common.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\bin\Debug\Remotes.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache

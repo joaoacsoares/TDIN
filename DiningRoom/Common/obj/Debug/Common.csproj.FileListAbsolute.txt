@@ -8,3 +8,8 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Com
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Common\obj\Debug\Common.dll
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Common\obj\Debug\Common.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Common\bin\Debug\Common.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Common\bin\Debug\Common.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Common\obj\Debug\Common.dll
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\DiningRoom\Common\obj\Debug\Common.pdb
