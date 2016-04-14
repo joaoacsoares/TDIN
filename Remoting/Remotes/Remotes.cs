@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
-public class TableOrders : MarshalByRefObject
+public class TableOrders : MarshalByRefObject, IOrders
 {
     private List<Order> AllOrders = new List<Order>();
     private List<Order> AllOrders1 = new List<Order>();
@@ -28,14 +27,7 @@ public class TableOrders : MarshalByRefObject
         return null;
     }
 
-    public void Add(int i, int idC, string name, int qt, float preco, int status, int resp)
-    {
-        Order nO = new Order(i, idC, name," ", qt, preco, 0, resp);
-        nO.id = AllOrders.Count + 1;
-        AllOrders.Add(nO);
-        AddingOrder();
-        Console.WriteLine("[Add] called.");
-    }
+
 
     public List<Order> GetCostumerOrders(string name)
     {
@@ -90,6 +82,29 @@ public class TableOrders : MarshalByRefObject
         AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
     }
 
+    public void Add(string name, string add, int cc, int tp, int qt)
+    {
+        Order nO = new Order(1, 1, name, " ", qt, 1, 0, 0);
+        //nO.id = AllOrders.Count + 1;
+        AllOrders.Add(nO);
+        //AddingOrder();
+        Console.WriteLine("[Add] called.");
+    }
+
+    public List<Order> GetPreparingOrders()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void setOrderReady(string t)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void setOrderDelivering(string t, string team)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 /*public class Entities : MarshalByRefObject, IEntity {
