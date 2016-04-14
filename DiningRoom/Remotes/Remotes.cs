@@ -16,8 +16,10 @@ namespace Remotes
         public event AddOrderEventHandler AddingOrder;
         public event PreparingOrderEventHandler PreparingOrder;
         public event ReadyOrderEventHandler ReadyOrder;
-        public event DeliveringOrderEventHandler DeliveringOrder;
         public event FinalizingOrderEventHandler FinalizingOrder;
+
+
+        public static TableOrders to;
 
         public TableOrders()
         {
@@ -30,19 +32,6 @@ namespace Remotes
             return null;
         }
 
-
-
-        public List<Order> GetCostumerOrders(string name)
-        {
-            /*List<Order> result = new List<Order>();
-            foreach (Order or in AllOrders)
-                if (or.customer.name == name)
-                    result.Add(or);
-            Console.WriteLine("[GetCostumerOrders] called.");
-            return result;*/
-            return null;
-        }
-
         public List<Order> GetAllOrders()
         {
             Console.WriteLine("[GetAllOrders] called.");
@@ -50,22 +39,15 @@ namespace Remotes
 
         }
 
-        public List<Order> GetOrdedOrders()
+        public List<Order> GetPreparingOrders()
         {
-            Console.WriteLine("[GetOrdedOrders] called.");
-            return AllOrders.FindAll(x => x.status == 0);
-
+            Console.WriteLine("[GetPreparingOrders] called.");
+            return AllOrders.FindAll(x => x.status == 1);
         }
 
         public List<Order> GetReadyOrders()
         {
             Console.WriteLine("[GetReadyOrders] called.");
-            return AllOrders.FindAll(x => x.status == 1);
-        }
-
-        public List<Order> GetDeliveringOrders()
-        {
-            Console.WriteLine("[GetDeliveringOrders] called.");
             return AllOrders.FindAll(x => x.status == 2);
         }
 
@@ -73,19 +55,18 @@ namespace Remotes
 
         public void setOrderPreparing(string t)
         {
-            /*
+
             AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 1;
             PreparingOrder();
-            AllOrders.Find(x => x.id == Convert.ToInt32(t)).customer.timestamp = DateTime.Now;*/
+
 
         }
 
 
-        public void setOrderDone(string t)
+        public void setOrderReady(string t)
         {
             AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
         }
-
         public void Add(string name, string description, int quant, int table, float price, string resp) 
         {
             int i = 0;
@@ -102,20 +83,6 @@ namespace Remotes
             
         }
 
-        public List<Order> GetPreparingOrders()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setOrderReady(string t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setOrderDelivering(string t, string team)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     /*public class Entities : MarshalByRefObject, IEntity {

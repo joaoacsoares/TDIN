@@ -12,7 +12,8 @@ namespace KitchenBar
     class KitchenBar
     {
         private static EventIntermediate inter;
-        private static IOrders ordersList;
+        public static IOrders ordersList;
+        public static List<Order> ReceivedOrders = new List<Order>();
 
         public object InitializeLifetimeService()
         {

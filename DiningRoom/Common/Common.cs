@@ -7,7 +7,6 @@ namespace Common
     public delegate void AddOrderEventHandler();
     public delegate void PreparingOrderEventHandler();
     public delegate void ReadyOrderEventHandler();
-    public delegate void DeliveringOrderEventHandler();
     public delegate void FinalizingOrderEventHandler();
 
 
@@ -52,20 +51,14 @@ namespace Common
         event AddOrderEventHandler AddingOrder;
         event PreparingOrderEventHandler PreparingOrder;
         event ReadyOrderEventHandler ReadyOrder;
-        event DeliveringOrderEventHandler DeliveringOrder;
         event FinalizingOrderEventHandler FinalizingOrder;
 
         void Add(string name, string description, int quant, int table, float price, string resp);
-        List<Order> GetCostumerOrders(string name);
         List<Order> GetAllOrders();
-        List<Order> GetOrdedOrders();
         List<Order> GetPreparingOrders();
         List<Order> GetReadyOrders();
-        List<Order> GetDeliveringOrders();
         void setOrderPreparing(string t);
         void setOrderReady(string t);
-        void setOrderDelivering(string t, string team);
-        void setOrderDone(string t);
 
 
     }
@@ -75,7 +68,6 @@ namespace Common
         public event AddOrderEventHandler AddingOrder;
         public event PreparingOrderEventHandler PreparingOrder;
         public event ReadyOrderEventHandler ReadyOrder;
-        public event DeliveringOrderEventHandler DeliveringOrder;
         public event FinalizingOrderEventHandler FinalizingOrder;
 
         public void FireAddingOrder()
@@ -91,11 +83,6 @@ namespace Common
         public void FireReadyOrder()
         {
             ReadyOrder();
-        }
-
-        public void FireDeliveringOrder()
-        {
-            DeliveringOrder();
         }
 
 

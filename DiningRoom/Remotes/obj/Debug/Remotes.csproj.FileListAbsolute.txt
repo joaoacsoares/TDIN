@@ -5,3 +5,10 @@ C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\Remotes\bin\Debug
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\Remotes\obj\Debug\Remotes.csprojResolveAssemblyReference.cache
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\Remotes\obj\Debug\Remotes.dll
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\Remotes\obj\Debug\Remotes.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\bin\Debug\Remotes.dll
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\bin\Debug\Remotes.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\bin\Debug\Common.dll
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\bin\Debug\Common.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\obj\Debug\Remotes.csprojResolveAssemblyReference.cache
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\obj\Debug\Remotes.dll
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\DiningRoom\Remotes\obj\Debug\Remotes.pdb
