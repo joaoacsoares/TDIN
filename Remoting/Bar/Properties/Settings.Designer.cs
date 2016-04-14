@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DiningRoom.Properties
+namespace Bar.Properties
 {
 
 

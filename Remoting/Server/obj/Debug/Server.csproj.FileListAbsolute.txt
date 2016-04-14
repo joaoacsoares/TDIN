@@ -8,4 +8,3 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\bin\Deb
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.exe
 C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Server\obj\Debug\Server.pdb
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\Remoting\Server\bin\Debug\Server.exe.config

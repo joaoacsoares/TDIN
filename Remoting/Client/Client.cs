@@ -51,6 +51,7 @@ class Client{
         List<Order> ReceivedOrders = ordersList.GetAllOrders();
         foreach(Order o in ReceivedOrders)
         {
+            Console.WriteLine("start");
             Console.WriteLine(o.id);
         }
         ordersList.Add("meu", "cois2", 1, 1, 1);
@@ -60,6 +61,7 @@ class Client{
         foreach (Order o in ReceivedOrders)
         {
             Console.WriteLine(o.id);
+            Console.WriteLine("finish");
         }
         //ordersList.AddingOrder += inter.FireAddingOrder;
         //ordersList.PreparingOrder += inter.FirePreparingOrder;
