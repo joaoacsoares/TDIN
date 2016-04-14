@@ -1,8 +1,0 @@
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\bin\Debug\Client.exe.config
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\bin\Debug\Client.exe
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\bin\Debug\Client.pdb
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\bin\Debug\Common.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\bin\Debug\Common.pdb
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\obj\Debug\Client.exe
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Client\obj\Debug\Client.pdb

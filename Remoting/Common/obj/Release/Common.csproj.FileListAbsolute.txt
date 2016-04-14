@@ -1,5 +1,0 @@
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Common\bin\Release\Common.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Common\bin\Release\Common.pdb
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Common\obj\Release\Common.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Common\obj\Release\Common.pdb

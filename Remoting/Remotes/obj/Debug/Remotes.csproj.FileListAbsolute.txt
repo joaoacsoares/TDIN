@@ -1,7 +1,0 @@
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\bin\Debug\Remotes.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\bin\Debug\Remotes.pdb
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\bin\Debug\Common.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\bin\Debug\Common.pdb
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\obj\Debug\Remotes.csprojResolveAssemblyReference.cache
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\obj\Debug\Remotes.dll
-C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN-Proj1\Remotes\obj\Debug\Remotes.pdb

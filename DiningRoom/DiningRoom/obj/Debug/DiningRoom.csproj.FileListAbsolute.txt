@@ -1,0 +1,12 @@
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\DiningRoom.exe.config
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\DiningRoom.exe
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\DiningRoom.pdb
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\Common.dll
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\Remotes.dll
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\Common.pdb
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\bin\Debug\Remotes.pdb
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csprojResolveAssemblyReference.cache
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.Properties.Resources.resources
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csproj.GenerateResource.Cache
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.exe
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.pdb
