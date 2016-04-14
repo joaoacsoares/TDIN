@@ -31,13 +31,14 @@ public class TableOrders : MarshalByRefObject, IOrders
 
     public List<Order> GetCostumerOrders(string name)
     {
-        List<Order> result = new List<Order>();
+        /*List<Order> result = new List<Order>();
 
         foreach (Order or in AllOrders)
             if (or.customer.name == name)
                 result.Add(or);
         Console.WriteLine("[GetCostumerOrders] called.");
-        return result;
+        return result;*/
+        return null;
     }
 
     public List<Order> GetAllOrders()
@@ -70,10 +71,11 @@ public class TableOrders : MarshalByRefObject, IOrders
 
     public void setOrderPreparing(string t)
     {
-
+        /*
         AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 1;
         PreparingOrder();
-        AllOrders.Find(x => x.id == Convert.ToInt32(t)).customer.timestamp = DateTime.Now;
+        AllOrders.Find(x => x.id == Convert.ToInt32(t)).customer.timestamp = DateTime.Now;*/
+       
     }
 
 
@@ -82,10 +84,16 @@ public class TableOrders : MarshalByRefObject, IOrders
         AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
     }
 
-    public void Add(string name, string add, int cc, int tp, int qt)
+    public void Add(string name, string description, int quant, int table, int type, float price)
     {
-        Order nO = new Order(1, 1, name, " ", qt, 1, 0, 0);
-        //nO.id = AllOrders.Count + 1;
+        int i = 0;
+        foreach(Order o in AllOrders)
+        {
+            if (i != o.id)
+                break;
+            else i++;
+        }
+        Order nO = new Order(i,table,name, description, quant, price,0,table);
         AllOrders.Add(nO);
         //AddingOrder();
         Console.WriteLine("[Add] called.");

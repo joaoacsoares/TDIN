@@ -8,36 +8,22 @@ public delegate void ReadyOrderEventHandler();
 public delegate void DeliveringOrderEventHandler();
 public delegate void FinalizingOrderEventHandler();
 
-[Serializable]
-public class Customer {
-    public DateTime timestamp;
 
-    public int id { get; set; }
-    public string name { get; set; }
-
-    public Customer(int i, string n)
-    {
-        id = i;
-        name = n;
-    }
-}
 
 
 [Serializable]
 public class Order
 {
     public int id { get; set; }
-    public int idClient { get; set; }
+    public int table { get; set; }
     public String name { get; set; }
     public String description { get; set; }
     public int quantity { get; set; }
     public float price { get; set; }
-    public Customer customer { get; set; }
-
     /*
     *  0 - kitchen | 1 - bar | 2 - both
     */
-    public int responsable { get; set; }
+    public int orderType { get; set; }
     /*
    * 0 - não atendido | 1 - em preparação | 2 - pronto
    */
@@ -47,13 +33,13 @@ public class Order
     public Order(int i, int idC, string n, String descript, int qt, float pr, int status, int resp)
     {
         id = i;
-        idClient = idC;
+        table = idC;
         name = n;
         description = descript;
         price = pr;
         quantity = qt;
         this.status = status;
-        responsable = resp;
+        orderType = resp;
     }
 }
 
@@ -66,7 +52,7 @@ public class Order
   event DeliveringOrderEventHandler DeliveringOrder;
   event FinalizingOrderEventHandler FinalizingOrder;
 
-  void Add(string name, string add, int cc, int tp, int qt);
+  void Add(string name, string description, int quant, int table, int type, float price);
   List<Order> GetCostumerOrders(string name);
   List<Order> GetAllOrders();
   List<Order> GetOrdedOrders();

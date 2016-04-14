@@ -1,31 +1,40 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Windows.Forms;
 using System.Runtime.Remoting;
+using DiningRoom;
 
-
-    class DinningRoom 
+class DinningRoom 
 
     {
     private static EventIntermediate inter;
-    private static IOrders ordersList; 
+    private static IOrders ordersList;
 
     static void Main(string[] args)
     {
 
-
+        
         RemotingConfiguration.Configure("DinningRoom.exe.config", false);
         inter = new EventIntermediate();
 
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+
         ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
-        Console.ReadLine();
+        
+
+
+
+
+        /*Console.ReadLine();
         List<Order> ReceivedOrders = ordersList.GetAllOrders();
         foreach (Order o in ReceivedOrders)
         {
             Console.WriteLine(o.id);
             Console.WriteLine("finish");
-        }
+        }*/
         /*List<Order> ReceivedOrders = ordersList.GetAllOrders();
         foreach (Order o in ReceivedOrders)
         {
