@@ -34,52 +34,69 @@ namespace Remotes
 
         public List<Order> GetAllOrders()
         {
-            Console.WriteLine("[GetAllOrders] called.");
+            //Console.WriteLine("[GetAllOrders] called.");
             return AllOrders;
 
         }
 
         public List<Order> GetPendingOrders()
         {
-            Console.WriteLine("[GetPendingOrders] called.");
+            //Console.WriteLine("[GetPendingOrders] called.");
             return AllOrders.FindAll(x => x.status == 0);
         }
 
         public List<Order> GetPreparingOrders()
         {
-            Console.WriteLine("[GetPreparingOrders] called.");
+            //Console.WriteLine("[GetPreparingOrders] called.");
             return AllOrders.FindAll(x => x.status == 1);
         }
 
         public List<Order> GetReadyOrders()
         {
-            Console.WriteLine("[GetReadyOrders] called.");
+            //Console.WriteLine("[GetReadyOrders] called.");
             return AllOrders.FindAll(x => x.status == 2);
         }
 
 
 
-        public void setOrderPreparing(string t)
+        public void setOrderPreparing(int t)
         {
-            string[] words = t.Split('/');
-            AllOrders.Find(x => x.name == words[0]).status = 1;
+            //string[] words = t.Split('/');
+            AllOrders.Find(x => x.id == t).status = 1;
             //PreparingOrder();
         }
 
 
-        public void setOrderReady(string t)
+        public void setOrderReady(int t)
         {
-            string[] words = t.Split('/');
-            AllOrders.Find(x => x.name == words[0]).status = 2;
+            //string[] words = t.Split('/');
+            AllOrders.Find(x => x.id == t).status = 2;
             //ReadyOrder();
         }
 
-        public void setOrderDone(string t)
+        public void setOrderDone(int t)
         {
-            string[] words = t.Split('/');
-            AllOrders.Find(x => x.name == words[0]).status = 3;
+            //string[] words = t.Split('/');
+            AllOrders.Find(x => x.id == t).status = 3;
             //FinalizingOrder();
         }
+
+        public void setOrderPay(int t)
+        {
+            //string[] words = t.Split('/');
+            AllOrders.Find(x => x.id == t).status = 4;
+            //FinalizingOrder();
+        }
+
+        public void setOrderClosed(int t)
+        {
+            //string[] words = t.Split('/');
+            AllOrders.Find(x => x.id == t).status = 5;
+            //FinalizingOrder();
+        }
+
+
+
 
 
         public void Add(string name, string description, int quant, int table, float price, string resp) 
@@ -94,7 +111,7 @@ namespace Remotes
             Order nO = new Order(i, table, name, description, quant, price, 0, resp);
             AllOrders.Add(nO);
             //AddingOrder();
-            Console.WriteLine("[Add] called.");
+            //Console.WriteLine("[Add] called.");
             
         }
 

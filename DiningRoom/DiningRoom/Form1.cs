@@ -76,8 +76,8 @@ namespace DiningRoom
             string aux;
             foreach(Order p in tmp)
             {
-                aux = "";
-                aux += p.description + '/' + p.table;
+                //aux = "";
+                aux = p.id + " / " + p.description + " / " + p.table;
                 listBox3.Items.Add(aux);
             }
             
@@ -90,12 +90,26 @@ namespace DiningRoom
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int tab = Int32.Parse(comboBox2.SelectedIndex.ToString())+1;
+            List<Order> tmp = DiningRoom.ordersList.GetAllOrders();
+            foreach(Order o in tmp)
+            {
+                if(o.table == tab)
+                {
+                    DiningRoom.ordersList.setOrderPay(o.id);
+                } 
+            }
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Form1_Load(sender, e);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

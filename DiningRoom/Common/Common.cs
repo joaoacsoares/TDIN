@@ -42,6 +42,8 @@ namespace Common
             this.status = status;
             orderType = resp;
         }
+
+        
     }
 
 
@@ -58,8 +60,10 @@ namespace Common
         List<Order> GetPendingOrders();
         List<Order> GetPreparingOrders();
         List<Order> GetReadyOrders();
-        void setOrderPreparing(string t);
-        void setOrderReady(string t);
+        void setOrderPreparing(int t);
+        void setOrderReady(int t);
+        void setOrderPay(int t);
+        void setOrderClosed(int t);
 
 
     }
