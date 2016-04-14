@@ -25,14 +25,14 @@ namespace Common
         /*
         *  0 - kitchen | 1 - bar | 2 - both
         */
-        public int orderType { get; set; }
+        public string orderType { get; set; }
         /*
        * 0 - não atendido | 1 - em preparação | 2 - pronto
        */
         public int status { get; set; }
 
 
-        public Order(int i, int idC, string n, String descript, int qt, float pr, int status, int resp)
+        public Order(int i, int idC, string n, String descript, int qt, float pr, int status, string resp)
         {
             id = i;
             table = idC;
@@ -55,7 +55,7 @@ namespace Common
         event DeliveringOrderEventHandler DeliveringOrder;
         event FinalizingOrderEventHandler FinalizingOrder;
 
-        void Add(string name, string description, int quant, int table, int type, float price);
+        void Add(string name, string description, int quant, int table, float price, string resp);
         List<Order> GetCostumerOrders(string name);
         List<Order> GetAllOrders();
         List<Order> GetOrdedOrders();

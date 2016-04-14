@@ -11,7 +11,7 @@ namespace DiningRoom
     class DiningRoom
     {
         private static EventIntermediate inter;
-        private static IOrders ordersList;
+        public static IOrders ordersList;
         public object InitializeLifetimeService()
         {
             Console.WriteLine("[DiningRoom]: InitilizeLifetimeService");
@@ -26,7 +26,7 @@ namespace DiningRoom
             RemotingConfiguration.Configure("DiningRoom.exe.config", false);
             inter = new EventIntermediate();
             ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
-            List<Order> ReceivedOrders = ordersList.GetAllOrders();
+            //List<Order> ReceivedOrders = ordersList.GetAllOrders();
             Application.EnableVisualStyles(); 
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

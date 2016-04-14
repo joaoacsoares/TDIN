@@ -10,3 +10,4 @@ C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\De
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.csproj.GenerateResource.Cache
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.exe
 C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.pdb
+C:\Users\Joao\Documents\Visual Studio 2015\Projects\DiningRoom\DiningRoom\obj\Debug\DiningRoom.Form1.resources

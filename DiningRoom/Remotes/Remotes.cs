@@ -86,7 +86,7 @@ namespace Remotes
             AllOrders.Find(x => x.id == Convert.ToInt32(t)).status = 2;
         }
 
-        public void Add(string name, string description, int quant, int table, int type, float price)
+        public void Add(string name, string description, int quant, int table, float price, string resp) 
         {
             int i = 0;
             foreach (Order o in AllOrders)
@@ -95,10 +95,11 @@ namespace Remotes
                     break;
                 else i++;
             }
-            Order nO = new Order(i, table, name, description, quant, price, 0, table);
+            Order nO = new Order(i, table, name, description, quant, price, 0, resp);
             AllOrders.Add(nO);
             //AddingOrder();
             Console.WriteLine("[Add] called.");
+            
         }
 
         public List<Order> GetPreparingOrders()
