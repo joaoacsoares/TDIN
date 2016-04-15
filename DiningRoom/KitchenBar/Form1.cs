@@ -72,15 +72,16 @@ namespace KitchenBar
         {
             listBox1.Items.Clear();
             listBox2.Items.Clear();
-            if(id==0)
+            if (id == 0)
             {
                 List<Order> tmp = KitchenBar.ordersList.GetPendingOrders();
                 string aux;
                 foreach (Order p in tmp)
                 {
-                    if (p.orderType.Equals(" Kitchen ")) { 
-                    aux = p.id + " / "+ p.description + " / " + p.table;
-                    listBox1.Items.Add(aux);
+                    if (p.orderType.Equals(" Kitchen "))
+                    {
+                        aux = p.id + " / " + p.description + " / " + p.table;
+                        listBox1.Items.Add(aux);
                     }
                 }
 
@@ -95,7 +96,7 @@ namespace KitchenBar
                     }
                 }
             }
-            else if (id==1)
+            else if (id == 1)
             {
                 List<Order> tmp = KitchenBar.ordersList.GetPendingOrders();
                 string aux;
@@ -113,6 +114,7 @@ namespace KitchenBar
                 foreach (Order p in tmp2)
                 {
                     if (p.orderType.Equals(" Bar "))
+                    {
                         aux2 = p.id + " / " + p.description + " / " + p.table;
                         listBox2.Items.Add(aux2);
                     }
@@ -126,3 +128,4 @@ namespace KitchenBar
         }
     }
 }
+
