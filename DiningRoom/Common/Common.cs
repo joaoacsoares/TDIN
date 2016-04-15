@@ -3,15 +3,6 @@ using System.Collections.Generic;
 
 namespace Common
 {
-    //Delegates
-   /* public delegate void AddOrderEventHandler();
-    public delegate void PreparingOrderEventHandler();
-    public delegate void ReadyOrderEventHandler();
-    public delegate void FinalizingOrderEventHandler();*/
-
-
-
-
     [Serializable]
     public class Order
     {
@@ -50,11 +41,6 @@ namespace Common
     public interface IOrders
     {
 
-       /* event AddOrderEventHandler AddingOrder;
-        event PreparingOrderEventHandler PreparingOrder;
-        event ReadyOrderEventHandler ReadyOrder;
-        event FinalizingOrderEventHandler FinalizingOrder;*/
-
         void Add(string name, string description, int quant, int table, float price, string resp);
         List<Order> GetAllOrders();
         List<Order> GetPendingOrders();
@@ -67,35 +53,4 @@ namespace Common
 
 
     }
-
-   /* public class EventIntermediate : MarshalByRefObject
-    {
-        public event AddOrderEventHandler AddingOrder;
-        public event PreparingOrderEventHandler PreparingOrder;
-        public event ReadyOrderEventHandler ReadyOrder;
-        public event FinalizingOrderEventHandler FinalizingOrder;
-
-        public void FireAddingOrder()
-        {
-            AddingOrder();
-        }
-
-        public void FirePreparingOrder()
-        {
-            PreparingOrder();
-        }
-
-        public void FireReadyOrder()
-        {
-            ReadyOrder();
-        }
-
-
-        public override object InitializeLifetimeService()
-        {
-            Console.WriteLine("[EventIntermediate]: InitilizeLifetimeService");
-            return null;
-        }
-
-    }*/
 }

@@ -12,7 +12,6 @@ namespace KitchenBar
 {
     class KitchenBar
     {
-        //private static EventIntermediate inter;
         public static IOrders ordersList;
         public static List<Order> ReceivedOrders = new List<Order>();
 
@@ -28,7 +27,6 @@ namespace KitchenBar
         static void Main()
         {
             RemotingConfiguration.Configure("KitchenBar.exe.config", false);
-            //inter = new EventIntermediate();
             
             Console.WriteLine("(0)Kitchen or (1)Bar or (2)Both!");
             string a = Console.ReadLine();

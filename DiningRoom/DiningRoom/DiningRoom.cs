@@ -24,10 +24,8 @@ namespace DiningRoom
         static void Main()
         {
             RemotingConfiguration.Configure("DiningRoom.exe.config", false);
-            //inter = new EventIntermediate();
            
             ordersList = (IOrders)Activator.GetObject(typeof(IOrders), "tcp://localhost:9000/Server/OrdersServer");
-            //List<Order> ReceivedOrders = ordersList.GetAllOrders();
             Application.EnableVisualStyles(); 
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

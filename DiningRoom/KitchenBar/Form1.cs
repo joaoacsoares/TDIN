@@ -38,17 +38,15 @@ namespace KitchenBar
 
         private void label1_Click(object sender, EventArgs e)
         {
-            //Form1_Load(sender, e);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //listBox2.Items.Add(listBox1.Items[listBox1.SelectedIndex].ToString());
-            //TableOrders.to.setOrderPreparing(listBox1.Items[listBox1.SelectedIndex].ToString());
             string[] tmp = listBox1.Items[listBox1.SelectedIndex].ToString().Split('/');
             KitchenBar.ordersList.setOrderPreparing(Int32.Parse(tmp[0]));
             timer1.Start();
-            //Form1_Load(sender,e);
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,7 +54,7 @@ namespace KitchenBar
             string[] tmp = listBox2.Items[listBox2.SelectedIndex].ToString().Split('/');
             KitchenBar.ordersList.setOrderReady(Int32.Parse(tmp[0]));
             timer1.Start();
-            //Form1_Load(sender, e);
+            
 
         }
 
@@ -67,11 +65,6 @@ namespace KitchenBar
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*KitchenBar.ReceivedOrders = KitchenBar.ordersList.GetAllOrders();
-            foreach (Common.Order ord in KitchenBar.ReceivedOrders)
-            {
-                listBox1.Items.Add(KitchenBar.ReceivedOrders.ElementAt(0).ToString());
-            }*/
             timer1.Stop();
         }
 
@@ -86,7 +79,6 @@ namespace KitchenBar
                 foreach (Order p in tmp)
                 {
                     if (p.orderType.Equals(" Kitchen ")) { 
-                    //aux = "";
                     aux = p.id + " / "+ p.description + " / " + p.table;
                     listBox1.Items.Add(aux);
                     }
@@ -98,7 +90,6 @@ namespace KitchenBar
                 {
                     if (p.orderType.Equals(" Kitchen "))
                     {
-                        //aux2 = "";
                         aux2 = p.id + " / " + p.description + " / " + p.table;
                         listBox2.Items.Add(aux2);
                     }
@@ -112,7 +103,6 @@ namespace KitchenBar
                 {
                     if (p.orderType.Equals(" Bar "))
                     {
-                        //aux = "";
                         aux = p.id + " / " + p.description + " / " + p.table;
                         listBox1.Items.Add(aux);
                     }
@@ -123,8 +113,6 @@ namespace KitchenBar
                 foreach (Order p in tmp2)
                 {
                     if (p.orderType.Equals(" Bar "))
-                    {
-                        //aux2 = "";
                         aux2 = p.id + " / " + p.description + " / " + p.table;
                         listBox2.Items.Add(aux2);
                     }

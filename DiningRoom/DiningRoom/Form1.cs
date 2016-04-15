@@ -23,25 +23,6 @@ namespace DiningRoom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //List<string> tmp = new List<string>();
-            //int aux = 0;
-            //foreach (string o in listBox2.Items)
-            //{
-            //  string[] words = o.Split('/');
-            //    foreach (string i in listBox2.Items)
-            //    {
-            //        aux = 0;
-            //        if(o.Equals(i))
-            //        {
-            //            aux = aux + 1;
-            //        }
-
-            //    }
-
-            //    if(!tmp.Contains(o))
-            //    DiningRoom.ordersList.Add(words[0], words[0], aux, Int32.Parse(comboBox1.SelectedIndex.ToString()), float.Parse(words[2], CultureInfo.InvariantCulture.NumberFormat), words[1]);
-            //    tmp.Add(o);
-            //}
             foreach (string o in listBox2.Items) { 
             string[] words = o.Split('/');
             DiningRoom.ordersList.Add(words[0], words[0], 1, Int32.Parse(comboBox1.SelectedIndex.ToString())+1, float.Parse(words[2], CultureInfo.InvariantCulture.NumberFormat), words[1]);
@@ -76,7 +57,6 @@ namespace DiningRoom
             string aux;
             foreach(Order p in tmp)
             {
-                //aux = "";
                 aux = p.id + " / " + p.description + " / " + p.table;
                 listBox3.Items.Add(aux);
             }
