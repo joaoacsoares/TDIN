@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 251);
+            this.button1.Location = new System.Drawing.Point(357, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 42);
             this.button1.TabIndex = 0;
@@ -59,22 +59,28 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Items.AddRange(new object[] {
-            "Prato 1 / Kitchen / 10.0",
-            "Prato 2 / Kitchen / 15.0",
-            "Bebida 1 / Bar / 5.0",
-            "Bebida 2 / Bar / 3.0"});
+            "Arroz de Pato / Kitchen / 10.0",
+            "Bacalhau com Natas / Kitchen / 8.0",
+            "Francesinha Especial / Kitchen / 7.5",
+            "Picanha / Kitchen / 12.5",
+            "Lasanha / Kitchen / 9.0",
+            "Agua / Bar / 1.0",
+            "Refrigerante / Bar / 1.5",
+            "Cerveja / Bar / 0.8",
+            "Garrafa de Vinho / Bar / 5.0",
+            "Amendoins ou Tremoços / Bar / 1.0"});
             this.listBox1.Location = new System.Drawing.Point(12, 56);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(128, 147);
+            this.listBox1.Size = new System.Drawing.Size(219, 147);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(158, 56);
+            this.listBox2.Location = new System.Drawing.Point(237, 56);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(158, 147);
+            this.listBox2.Size = new System.Drawing.Size(218, 147);
             this.listBox2.TabIndex = 2;
             // 
             // label1
@@ -89,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 18);
+            this.label2.Location = new System.Drawing.Point(257, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 4;
@@ -110,7 +116,7 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 34);
+            this.comboBox1.Location = new System.Drawing.Point(274, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
@@ -118,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(155, 40);
+            this.label3.Location = new System.Drawing.Point(234, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 6;
@@ -126,7 +132,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(206, 209);
+            this.button2.Location = new System.Drawing.Point(237, 209);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -137,16 +143,16 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(342, 56);
+            this.listBox3.Location = new System.Drawing.Point(461, 56);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(146, 147);
+            this.listBox3.Size = new System.Drawing.Size(228, 147);
             this.listBox3.TabIndex = 8;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(339, 18);
+            this.label4.Location = new System.Drawing.Point(500, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 9;
@@ -154,7 +160,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(520, 113);
+            this.button3.Location = new System.Drawing.Point(718, 77);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -176,7 +182,7 @@
             "8",
             "9",
             "10"});
-            this.comboBox2.Location = new System.Drawing.Point(520, 86);
+            this.comboBox2.Location = new System.Drawing.Point(718, 50);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 11;
@@ -184,7 +190,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(539, 70);
+            this.label5.Location = new System.Drawing.Point(715, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 12;
@@ -198,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 319);
+            this.ClientSize = new System.Drawing.Size(851, 319);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button3);
