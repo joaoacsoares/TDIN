@@ -1,0 +1,17 @@
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Debug\ServerA.exe.config
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Debug\ServerA.exe
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Debug\ServerA.pdb
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Debug\BankA.dll
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Debug\BankA.pdb
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\obj\Debug\ResolveAssemblyReference.cache
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\obj\Debug\ServerA.exe
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\obj\Debug\ServerA.pdb
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\bin\Debug\ServerA.exe.config
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Debug\ServerA.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Debug\ServerA.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\bin\Debug\ServerA.exe.config
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\obj\Debug\ServerA.exe
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\obj\Debug\ServerA.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\bin\Debug\ServerA.exe
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\bin\Debug\ServerA.pdb
+C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\obj\Debug\ServerA.csprojResolveAssemblyReference.cache

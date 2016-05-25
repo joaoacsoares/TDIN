@@ -1,0 +1,16 @@
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe.config
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\Client\obj\Release\ResolveAssemblyReference.cache
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\Client\obj\Release\Client.exe
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe.config
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\Client\obj\Release\Client.exe
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\Client\obj\Release\Client.csprojResolveAssemblyReference.cache
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe.config
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\obj\Release\Client.csprojResolveAssemblyReference.cache
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\obj\Release\Client.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe.config
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\bin\Release\Client.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\obj\Release\Client.csprojResolveAssemblyReference.cache
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\Client\obj\Release\Client.exe

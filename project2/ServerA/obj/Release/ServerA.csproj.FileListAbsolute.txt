@@ -1,0 +1,16 @@
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\obj\Release\ResolveAssemblyReference.cache
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.exe
+C:\Apm\Visual Studio 2008\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe.config
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe.config
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.exe
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe
+C:\Users\apm\Documents\Visual Studio 2012\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.csprojResolveAssemblyReference.cache
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe.config
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.csprojResolveAssemblyReference.cache
+D:\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe.config
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\bin\Release\ServerA.exe
+D:\Users\Miguel\Documents\Visual Studio 2015\Projects\WCFTransactionDemo\ServerA\obj\Release\ServerA.csprojResolveAssemblyReference.cache
