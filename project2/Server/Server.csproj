@@ -83,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Service References\BankA\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankA\Server.BankA.Ordem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Supervisor\item21.xsd">
       <SubType>Designer</SubType>
     </None>

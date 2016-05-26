@@ -82,11 +82,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\BankA\BankAOps1.wsdl" />
-    <None Include="Service References\BankA\item2.xsd">
+    <None Include="Service References\BankA\BankAOps.wsdl" />
+    <None Include="Service References\BankA\Client.BankA.Ordem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankA\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\BankA\item21.xsd">
+    <None Include="Service References\BankA\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankA\item2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\BankB\BankBOps1.wsdl" />
@@ -122,18 +128,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BankA\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BankA\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BankA\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\BankB\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -158,13 +152,25 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BankA\item1.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\BankB\item1.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\InterBank\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankA\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankA\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankA\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

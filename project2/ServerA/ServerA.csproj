@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BankAOps.cs" />
     <Compile Include="IBankAOps.cs" />
+    <Compile Include="Ordem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
