@@ -14,18 +14,7 @@
         public double valueStock { get; set; }
         public int state { get; set; }
 
-        /*public Ordem (int id, int cli, int comp, string email, int type, int quant,  string Cdate , string Edate, double val, int st)
-        {
-            this.id = id;
-            this.clientId = cli;
-            this.email = email;
-            this.type = type;
-            this.companyId = comp;
-            this.creationDate = Cdate;
-            this.executionDate = Edate;
-            this.valueStock = val;
-            this.state = st;
-        }*/
+       
 
     }
 }

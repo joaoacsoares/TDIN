@@ -83,6 +83,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\BankA\BankAOps.wsdl" />
+    <None Include="Service References\BankA\Client.BankA.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankA\Client.BankA.Empresa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\BankA\Client.BankA.Ordem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankAOps.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Empresa.cs" />
     <Compile Include="IBankAOps.cs" />
     <Compile Include="Ordem.cs" />
     <Compile Include="Program.cs" />

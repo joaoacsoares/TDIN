@@ -50,7 +50,7 @@ namespace Server.BankA {
         private int typeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private float valueStockField;
+        private double valueStockField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -180,7 +180,7 @@ namespace Server.BankA {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public float valueStock {
+        public double valueStock {
             get {
                 return this.valueStockField;
             }
@@ -188,6 +188,144 @@ namespace Server.BankA {
                 if ((this.valueStockField.Equals(value) != true)) {
                     this.valueStockField = value;
                     this.RaisePropertyChanged("valueStock");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cliente", Namespace="http://schemas.datacontract.org/2004/07/BankA")]
+    [System.SerializableAttribute()]
+    public partial class Cliente : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Empresa", Namespace="http://schemas.datacontract.org/2004/07/BankA")]
+    [System.SerializableAttribute()]
+    public partial class Empresa : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int stockDisponivelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double valorCotacaoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int stockDisponivel {
+            get {
+                return this.stockDisponivelField;
+            }
+            set {
+                if ((this.stockDisponivelField.Equals(value) != true)) {
+                    this.stockDisponivelField = value;
+                    this.RaisePropertyChanged("stockDisponivel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double valorCotacao {
+            get {
+                return this.valorCotacaoField;
+            }
+            set {
+                if ((this.valorCotacaoField.Equals(value) != true)) {
+                    this.valorCotacaoField = value;
+                    this.RaisePropertyChanged("valorCotacao");
                 }
             }
         }
@@ -219,6 +357,42 @@ namespace Server.BankA {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetOrdensResponse")]
         Server.BankA.Ordem[] GetOrdens();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetOrdem", ReplyAction="http://tempuri.org/IBankAOps/GetOrdemResponse")]
+        Server.BankA.Ordem GetOrdem(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetNotExecutedOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetNotExecutedOrdensResponse")]
+        Server.BankA.Ordem[] GetNotExecutedOrdens();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetExecutedOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetExecutedOrdensResponse")]
+        Server.BankA.Ordem[] GetExecutedOrdens();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetClienteOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetClienteOrdensResponse")]
+        Server.BankA.Ordem[] GetClienteOrdens(int idCli);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/addOrdem", ReplyAction="http://tempuri.org/IBankAOps/addOrdemResponse")]
+        [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Allowed)]
+        void addOrdem(Server.BankA.Ordem od);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/executeOrdem", ReplyAction="http://tempuri.org/IBankAOps/executeOrdemResponse")]
+        [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Allowed)]
+        void executeOrdem(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetClientes", ReplyAction="http://tempuri.org/IBankAOps/GetClientesResponse")]
+        Server.BankA.Cliente[] GetClientes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetCliente", ReplyAction="http://tempuri.org/IBankAOps/GetClienteResponse")]
+        Server.BankA.Cliente GetCliente(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetEmpresas", ReplyAction="http://tempuri.org/IBankAOps/GetEmpresasResponse")]
+        Server.BankA.Empresa[] GetEmpresas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetEmpresa", ReplyAction="http://tempuri.org/IBankAOps/GetEmpresaResponse")]
+        Server.BankA.Empresa GetEmpresa(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/editEmpresaValue", ReplyAction="http://tempuri.org/IBankAOps/editEmpresaValueResponse")]
+        [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Allowed)]
+        void editEmpresaValue(int id, int val);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -262,6 +436,50 @@ namespace Server.BankA {
         
         public Server.BankA.Ordem[] GetOrdens() {
             return base.Channel.GetOrdens();
+        }
+        
+        public Server.BankA.Ordem GetOrdem(int id) {
+            return base.Channel.GetOrdem(id);
+        }
+        
+        public Server.BankA.Ordem[] GetNotExecutedOrdens() {
+            return base.Channel.GetNotExecutedOrdens();
+        }
+        
+        public Server.BankA.Ordem[] GetExecutedOrdens() {
+            return base.Channel.GetExecutedOrdens();
+        }
+        
+        public Server.BankA.Ordem[] GetClienteOrdens(int idCli) {
+            return base.Channel.GetClienteOrdens(idCli);
+        }
+        
+        public void addOrdem(Server.BankA.Ordem od) {
+            base.Channel.addOrdem(od);
+        }
+        
+        public void executeOrdem(int id) {
+            base.Channel.executeOrdem(id);
+        }
+        
+        public Server.BankA.Cliente[] GetClientes() {
+            return base.Channel.GetClientes();
+        }
+        
+        public Server.BankA.Cliente GetCliente(int id) {
+            return base.Channel.GetCliente(id);
+        }
+        
+        public Server.BankA.Empresa[] GetEmpresas() {
+            return base.Channel.GetEmpresas();
+        }
+        
+        public Server.BankA.Empresa GetEmpresa(int id) {
+            return base.Channel.GetEmpresa(id);
+        }
+        
+        public void editEmpresaValue(int id, int val) {
+            base.Channel.editEmpresaValue(id, val);
         }
     }
 }

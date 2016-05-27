@@ -86,6 +86,12 @@
     <None Include="Service References\BankA\item.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\BankA\Server.BankA.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankA\Server.BankA.Empresa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\BankA\Server.BankA.Ordem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
