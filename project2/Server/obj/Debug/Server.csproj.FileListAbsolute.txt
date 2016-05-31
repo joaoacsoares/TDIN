@@ -1,6 +1,0 @@
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\bin\Debug\Server.exe.config
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\bin\Debug\Server.exe
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\bin\Debug\Server.pdb
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\obj\Debug\Server.exe
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\obj\Debug\Server.pdb
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache

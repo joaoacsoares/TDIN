@@ -3,77 +3,14 @@ using System.ServiceModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.Messaging;
 
 namespace BankA
 {
     public class BankAOps : IBankAOps
     {
         public static string connString = ConfigurationManager.ConnectionStrings["DepInf"].ToString();
-
-
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = false)]
-        public void Deposit(int acct, double amount)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            int rows;
-            try
-            {
-                conn.Open();
-                string sqlcmd = "update Accounts set Balance=Balance+" + amount.ToString("F2") +
-                           "where AccNr=" + acct;
-                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
-                rows = cmd.ExecuteNonQuery();
-                if (rows == 1)
-                    OperationContext.Current.SetTransactionComplete();
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = false)]
-        public void Withdraw(int acct, double amount)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            int rows;
-            try
-            {
-                conn.Open();
-                string sqlcmd = "update Accounts set Balance=Balance-" + amount.ToString("F2") +
-                           "where AccNr=" + acct;
-                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
-                rows = cmd.ExecuteNonQuery();
-                if (rows == 1)
-                    OperationContext.Current.SetTransactionComplete();
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
-        public double GetBalance(int acct)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            double amount;
-            try
-            {
-                conn.Open();
-                string sqlcmd = "select Balance from Accounts where AccNr=" + acct;
-                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
-                amount = Convert.ToDouble((decimal)cmd.ExecuteScalar());
-            }
-            catch
-            {
-                amount = -1.0;
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return amount;
-        }
+        
 
         public List<Ordem> GetOrdens()
         {
@@ -396,6 +333,7 @@ namespace BankA
         public void addOrdem(Ordem od)
         {
             SqlConnection conn = new SqlConnection(connString);
+            
             int rows;
             try
             {
@@ -415,6 +353,24 @@ namespace BankA
             {
                 conn.Close();
             }
+
+            MessageQueue messageQueue = null;
+            if (MessageQueue.Exists(@".\Private$\supervisor"))
+            {
+                messageQueue = new MessageQueue(@".\Private$\supervisor");
+                if (messageQueue.Transactional == true)
+                {
+                    using (MessageQueueTransaction trans = new MessageQueueTransaction())
+                    {
+                        trans.Begin();
+                        messageQueue.Send(/*"insert into orders(id,quantity, request_date, company_id,order_type,client_id,execution_status, client_name) values(" + id.ToString() + "," + quantity.ToString() + "," +
+            "'" + request_date_time.ToString() + "'" + "," + company_id.ToString() + "," + "'" + order_type + "'," + client_id.ToString() + ",'Request','" + username + "');", order_type + " " + id*/ "hello!", trans);
+                        trans.Commit();
+                    }
+                }
+            }
+            else
+                messageQueue.Send("First ever Message is sent to MSMQ"/*, order_type + " " + id*/);
         }
 
         public void executeOrdem(int id)
@@ -540,5 +496,7 @@ namespace BankA
                 conn.Close();
             }
         }
+
+      
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
-using Client.InterBank;
 using Client.BankA;
-using Client.BankB;
 using System.Collections.Generic;
 
 namespace Client
@@ -11,16 +9,16 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            InterBankOpsClient proxy = new InterBankOpsClient();
+            
             BankAOpsClient bankAProxy = new BankAOpsClient();
-            BankBOpsClient bankBProxy = new BankBOpsClient();
+            
 
-            /*
-            //TESTS START HERE
+
+            /*//TESTS START HERE
             //ORDERS TESTS
             Console.WriteLine("criar ordem :");
             Ordem aux = new Ordem();
-            aux.id = 7;
+            aux.id = 9;
             aux.clientId = 2;
             aux.companyId = 2;
             aux.email = " 'joaosoaresacs@gmail.com' ";
@@ -101,8 +99,8 @@ namespace Client
 
             Console.WriteLine("=======//=====");
 
-            //TESTS END HERE
-            */
+           
+            
 
 
             Console.WriteLine("editing empresa 1:");
@@ -111,49 +109,61 @@ namespace Client
             Console.WriteLine("=======//=====");
             Console.WriteLine(bankAProxy.GetEmpresa(1).ID + " - " + bankAProxy.GetEmpresa(1).valorCotacao);
 
-            /*
+             //TESTS END HERE*/
             //EXECUTE ORDEM 10 TEST (if ordem 10 already exists please change this)
+
+            Console.WriteLine("todas as ordens:");
+            BankA.Ordem[] tmp1 = bankAProxy.GetOrdens();
+            foreach (BankA.Ordem t in tmp1)
+            {
+                Console.WriteLine(t.id + " - state - " + t.state);
+            }
+            Console.WriteLine("=======//=====");
+
             Console.WriteLine("criar ordem :");
-            Ordem aux = new Ordem();
-            aux.id = 10;
-            aux.clientId = 2;
-            aux.companyId = 2;
-            aux.email = " 'joaosoaresacs@gmail.com' ";
-            aux.type = 0;
-            aux.quant = 4;
-            aux.creationDate = "270520160000";
-            aux.executionDate = "270520160100";
-            aux.valueStock = 1000;
-            aux.state = (int)0;
+            Ordem aux1 = new Ordem();
+            aux1.id = 23;
+            aux1.clientId = 2;
+            aux1.companyId = 2;
+            aux1.email = " 'joaosoaresacs@gmail.com' ";
+            aux1.type = 0;
+            aux1.quant = 4;
+            aux1.creationDate = "270520160000";
+            aux1.executionDate = "270520160100";
+            aux1.valueStock = 1000;
+            aux1.state = (int)0;
 
-            bankAProxy.addOrdem(aux);
+            
+
+            bankAProxy.addOrdem(aux1);
+
+            
+            
             Console.WriteLine("=======//=====");
 
             Console.WriteLine("todas as ordens:");
-            Ordem[] tmp = bankAProxy.GetOrdens();
-            foreach (Ordem t in tmp)
+            BankA.Ordem[] tmp9 = bankAProxy.GetOrdens();
+            foreach (BankA.Ordem t in tmp9)
             {
                 Console.WriteLine(t.id + " - state - " + t.state);
             }
             Console.WriteLine("=======//=====");
 
-            Console.WriteLine("executar ordem 10:");
-            bankAProxy.executeOrdem(10);
-            Console.WriteLine("=======//=====");
+
+            Console.ReadLine();
             Console.WriteLine("todas as ordens:");
-            Ordem[] tmp1 = bankAProxy.GetOrdens();
-            foreach (Ordem t in tmp1)
+            BankA.Ordem[] tmp10 = bankAProxy.GetOrdens();
+            foreach (BankA.Ordem t in tmp10)
             {
                 Console.WriteLine(t.id + " - state - " + t.state);
             }
             Console.WriteLine("=======//=====");
-            */
+            
 
 
-            bankBProxy.Close();
+
             bankAProxy.Close();
-            if (proxy.State == CommunicationState.Opened)
-             proxy.Close();
+            
             Console.WriteLine("Press <Enter> to terminate.");
             Console.ReadLine();
         }

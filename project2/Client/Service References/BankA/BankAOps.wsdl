@@ -8,20 +8,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="TcpOps_Deposit_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="TcpOps_Withdraw_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="TcpOps_addOrdem_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -43,6 +29,13 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="TcpOps_sendOrder_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BankA/?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -50,24 +43,6 @@
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BankA/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BankA" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IBankAOps_Deposit_InputMessage">
-    <wsdl:part name="parameters" element="tns:Deposit" />
-  </wsdl:message>
-  <wsdl:message name="IBankAOps_Deposit_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DepositResponse" />
-  </wsdl:message>
-  <wsdl:message name="IBankAOps_Withdraw_InputMessage">
-    <wsdl:part name="parameters" element="tns:Withdraw" />
-  </wsdl:message>
-  <wsdl:message name="IBankAOps_Withdraw_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WithdrawResponse" />
-  </wsdl:message>
-  <wsdl:message name="IBankAOps_GetBalance_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetBalance" />
-  </wsdl:message>
-  <wsdl:message name="IBankAOps_GetBalance_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetBalanceResponse" />
-  </wsdl:message>
   <wsdl:message name="IBankAOps_GetOrdens_InputMessage">
     <wsdl:part name="parameters" element="tns:GetOrdens" />
   </wsdl:message>
@@ -140,19 +115,13 @@
   <wsdl:message name="IBankAOps_editEmpresaValue_OutputMessage">
     <wsdl:part name="parameters" element="tns:editEmpresaValueResponse" />
   </wsdl:message>
+  <wsdl:message name="IBankAOps_sendOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendOrder" />
+  </wsdl:message>
+  <wsdl:message name="IBankAOps_sendOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendOrderResponse" />
+  </wsdl:message>
   <wsdl:portType msc:usingSession="true" name="IBankAOps">
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Deposit">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/Deposit" message="tns:IBankAOps_Deposit_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/DepositResponse" message="tns:IBankAOps_Deposit_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Withdraw">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/Withdraw" message="tns:IBankAOps_Withdraw_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/WithdrawResponse" message="tns:IBankAOps_Withdraw_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetBalance">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/GetBalance" message="tns:IBankAOps_GetBalance_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/GetBalanceResponse" message="tns:IBankAOps_GetBalance_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetOrdens">
       <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/GetOrdens" message="tns:IBankAOps_GetOrdens_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/GetOrdensResponse" message="tns:IBankAOps_GetOrdens_OutputMessage" />
@@ -201,39 +170,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/editEmpresaValue" message="tns:IBankAOps_editEmpresaValue_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/editEmpresaValueResponse" message="tns:IBankAOps_editEmpresaValue_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="sendOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankAOps/sendOrder" message="tns:IBankAOps_sendOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankAOps/sendOrderResponse" message="tns:IBankAOps_sendOrder_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="TcpOps" type="tns:IBankAOps">
     <wsp:PolicyReference URI="#TcpOps_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="Deposit">
-      <wsp:PolicyReference URI="#TcpOps_Deposit_policy" />
-      <soap12:operation soapAction="http://tempuri.org/IBankAOps/Deposit" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Withdraw">
-      <wsp:PolicyReference URI="#TcpOps_Withdraw_policy" />
-      <soap12:operation soapAction="http://tempuri.org/IBankAOps/Withdraw" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetBalance">
-      <soap12:operation soapAction="http://tempuri.org/IBankAOps/GetBalance" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetOrdens">
       <soap12:operation soapAction="http://tempuri.org/IBankAOps/GetOrdens" style="document" />
       <wsdl:input>
@@ -338,6 +282,16 @@
     <wsdl:operation name="editEmpresaValue">
       <wsp:PolicyReference URI="#TcpOps_editEmpresaValue_policy" />
       <soap12:operation soapAction="http://tempuri.org/IBankAOps/editEmpresaValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendOrder">
+      <wsp:PolicyReference URI="#TcpOps_sendOrder_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IBankAOps/sendOrder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
