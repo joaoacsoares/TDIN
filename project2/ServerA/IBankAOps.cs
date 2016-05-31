@@ -7,6 +7,13 @@ namespace BankA
     [ServiceContract(SessionMode = SessionMode.Required)]
     public interface IBankAOps
     {
+        
+        [OperationContract]
+        void subscrever();
+
+        [OperationContract]
+        void unSubscrever();
+
         [OperationContract]
         List<Ordem> GetOrdens();
 
@@ -24,11 +31,11 @@ namespace BankA
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        void addOrdem(Ordem od);
+        void addOrdem(int clientId, int companyId, string email, int type, int quant);
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        void executeOrdem(int id);
+        void executeOrdem(int id, double value);
 
         [OperationContract]
         List<Cliente> GetClientes();

@@ -9,8 +9,9 @@ namespace BankA
 {
     public class BankAOps : IBankAOps
     {
+
         public static string connString = ConfigurationManager.ConnectionStrings["DepInf"].ToString();
-        
+        public Boolean subscribed = false;
 
         public List<Ordem> GetOrdens()
         {
@@ -40,9 +41,11 @@ namespace BankA
                         //Console.WriteLine(o.quant);
                         o.creationDate = (string)results.GetValue(6);
                         //Console.WriteLine(o.creationDate);
+                        /*if(results.GetValue(7).)
                         o.executionDate = (string)results.GetValue(7);
-                       // Console.WriteLine(o.executionDate);
-                        o.valueStock = (double)results.GetValue(8); 
+                        // Console.WriteLine(o.executionDate);
+                        if (results.GetValue(8) != System.DBNull)
+                            o.valueStock = (double)results.GetValue(8); */
                         //Console.WriteLine(o.valueStock);
                         o.state = (int)results.GetValue(9);
                         //Console.WriteLine(o.state);
@@ -203,16 +206,16 @@ namespace BankA
                         o.email = (string)results.GetValue(3);
                         //Console.WriteLine(o.email);
                         o.type = (int)results.GetValue(4);
-                        //Console.WriteLine(o.type);
+                       // Console.WriteLine(o.type);
                         o.quant = (int)results.GetValue(5);
                         //Console.WriteLine(o.quant);
                         o.creationDate = (string)results.GetValue(6);
-                        //Console.WriteLine(o.creationDate);
-                        o.executionDate = (string)results.GetValue(7);
-                        // Console.WriteLine(o.executionDate);
-                        o.valueStock = (double)results.GetValue(8);
+                       // Console.WriteLine(o.creationDate);
+                        //o.executionDate = (string)results.GetValue(7);
+                       // Console.WriteLine(o.executionDate);
+                        //o.valueStock = (double)results.GetValue(8);
                         //Console.WriteLine(o.valueStock);
-                        o.state = (int)results.GetValue(9);
+                        //o.state = (int)results.GetValue(9);
                         //Console.WriteLine(o.state);
                         ordemList.Add(o);
                     }
@@ -330,17 +333,21 @@ namespace BankA
             return ordemList;
         }
 
-        public void addOrdem(Ordem od)
+        public void addOrdem(int clientId, int companyId, string email, int type, int quant)
         {
             SqlConnection conn = new SqlConnection(connString);
             
             int rows;
+            DateTime localDate = DateTime.Now;
+            string creationDate = localDate.ToString();
+            creationDate = creationDate.Replace(" ", "-");
+            creationDate = creationDate.Replace(":", "-");
             try
             {
                 conn.Open();
-                string sqlcmd = "INSERT INTO Ordem (ID, IDCliente, IDEmpresa, emailCliente, tipo, quantidade, dataCriacao ,dataExecucao, valorCotacao, estadoOrdem)" + 
-                    "VALUES (" + od.id + "," + od.clientId+ "," + od.companyId + "," + od.email + "," + od.type + "," + od.quant + "," + od.creationDate + "," + od.executionDate + "," + od.valueStock + "," + od.state +")";
-
+                string sqlcmd = "INSERT INTO Ordem (IDCliente, IDEmpresa, emailCliente, tipo, quantidade, dataCriacao,estadoOrdem)" + 
+                    "VALUES (" + clientId+ "," + companyId + ",'" + email + "'," + type + "," + quant + ",'" + creationDate  + "',0)";
+                Console.WriteLine(sqlcmd);
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
 
@@ -354,6 +361,32 @@ namespace BankA
                 conn.Close();
             }
 
+
+            int id = -1;
+            try
+            {
+                conn.Open();
+                string sqlcmd = "SELECT TOP 1 ID FROM Ordem ORDER BY ID DESC";
+                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                using (SqlDataReader results = cmd.ExecuteReader())
+                {
+                    while (results.Read())
+                    {
+
+                        id = (int)results.GetValue(0);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
             MessageQueue messageQueue = null;
             if (MessageQueue.Exists(@".\Private$\supervisor"))
             {
@@ -363,8 +396,7 @@ namespace BankA
                     using (MessageQueueTransaction trans = new MessageQueueTransaction())
                     {
                         trans.Begin();
-                        messageQueue.Send(/*"insert into orders(id,quantity, request_date, company_id,order_type,client_id,execution_status, client_name) values(" + id.ToString() + "," + quantity.ToString() + "," +
-            "'" + request_date_time.ToString() + "'" + "," + company_id.ToString() + "," + "'" + order_type + "'," + client_id.ToString() + ",'Request','" + username + "');", order_type + " " + id*/ "hello!", trans);
+                        messageQueue.Send("+Ordem+" + id + "+" + companyId + "+" + type + "+" + quant + "+" + creationDate, trans);
                         trans.Commit();
                     }
                 }
@@ -373,20 +405,23 @@ namespace BankA
                 messageQueue.Send("First ever Message is sent to MSMQ"/*, order_type + " " + id*/);
         }
 
-        public void executeOrdem(int id)
+        public void executeOrdem(int id, double value)
         {
             SqlConnection conn = new SqlConnection(connString);
             int rows;
-
+            DateTime localDate = DateTime.Now;
+            string execDate = localDate.ToString();
+            execDate = execDate.Replace(" ", "-");
+            execDate = execDate.Replace(":", "-");
             try
             {
                 conn.Open();
-                string sqlcmd = "update Ordem set EstadoOrdem= 1" +
-                           "where ID=" + id;
+                string sqlcmd = "update Ordem set estadoOrdem = 1, valorCotacao = " + value.ToString() + ", dataExecucao = '" + execDate + "' " +
+                           " where ID=" + id;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
-                if (rows == 1)
-                    OperationContext.Current.SetTransactionComplete();
+                /*if (rows == 1)
+                    OperationContext.Current.SetTransactionComplete();*/
 
             }
             catch (Exception exc)
@@ -497,6 +532,16 @@ namespace BankA
             }
         }
 
-      
+        public void subscrever()
+        {
+            subscribed = true;
+            Console.WriteLine("Departamento Bolsista está online!");
+        }
+
+        public void unSubscrever()
+        {
+            subscribed = false;
+            Console.WriteLine("Departamento Bolsista está offline!");
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Client
         {
             
             BankAOpsClient bankAProxy = new BankAOpsClient();
-            
+
 
 
             /*//TESTS START HERE
@@ -112,44 +112,35 @@ namespace Client
              //TESTS END HERE*/
             //EXECUTE ORDEM 10 TEST (if ordem 10 already exists please change this)
 
-            Console.WriteLine("todas as ordens:");
-            BankA.Ordem[] tmp1 = bankAProxy.GetOrdens();
-            foreach (BankA.Ordem t in tmp1)
-            {
-                Console.WriteLine(t.id + " - state - " + t.state);
-            }
-            Console.WriteLine("=======//=====");
 
-            Console.WriteLine("criar ordem :");
-            Ordem aux1 = new Ordem();
-            aux1.id = 23;
+            /*Ordem aux1 = new Ordem();
             aux1.clientId = 2;
             aux1.companyId = 2;
             aux1.email = " 'joaosoaresacs@gmail.com' ";
             aux1.type = 0;
-            aux1.quant = 4;
-            aux1.creationDate = "270520160000";
-            aux1.executionDate = "270520160100";
-            aux1.valueStock = 1000;
-            aux1.state = (int)0;
+            aux1.quant = 4;*/
+            //aux1.creationDate = "270520160000";
+            //aux1.executionDate = "270520160100";
+            //aux1.valueStock = 1000;
+            //aux1.state = (int)0;
 
-            
 
-            bankAProxy.addOrdem(aux1);
-
-            
-            
+            Console.WriteLine("criar ordem :");
+            bankAProxy.addOrdem(1, 1, "joaosoaresacs@gmail.com", 0, 4);
+            bankAProxy.addOrdem(1,1,"joaosoaresacs@gmail.com",0,4);
             Console.WriteLine("=======//=====");
+            Console.WriteLine("enter to print orders");
+            Console.ReadLine();
 
             Console.WriteLine("todas as ordens:");
-            BankA.Ordem[] tmp9 = bankAProxy.GetOrdens();
-            foreach (BankA.Ordem t in tmp9)
+            Ordem[] tmp9 = bankAProxy.GetOrdens();
+            foreach (Ordem t in tmp9)
             {
                 Console.WriteLine(t.id + " - state - " + t.state);
             }
             Console.WriteLine("=======//=====");
 
-
+            Console.WriteLine("enter to print orders");
             Console.ReadLine();
             Console.WriteLine("todas as ordens:");
             BankA.Ordem[] tmp10 = bankAProxy.GetOrdens();
@@ -161,7 +152,7 @@ namespace Client
             
 
 
-
+    
             bankAProxy.Close();
             
             Console.WriteLine("Press <Enter> to terminate.");

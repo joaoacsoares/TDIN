@@ -26,7 +26,7 @@ namespace Supervisor
                     while (sr.Peek() >= 0)
                     {
                         rec += sr.ReadLine();
-                        
+
                     }
                     Console.WriteLine(rec);
                     /*

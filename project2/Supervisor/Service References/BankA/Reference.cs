@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.BankA {
+namespace Supervisor.BankA {
     using System.Runtime.Serialization;
     using System;
     
@@ -351,19 +351,19 @@ namespace Client.BankA {
         void unSubscrever();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetOrdensResponse")]
-        Client.BankA.Ordem[] GetOrdens();
+        Supervisor.BankA.Ordem[] GetOrdens();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetOrdem", ReplyAction="http://tempuri.org/IBankAOps/GetOrdemResponse")]
-        Client.BankA.Ordem GetOrdem(int id);
+        Supervisor.BankA.Ordem GetOrdem(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetNotExecutedOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetNotExecutedOrdensResponse")]
-        Client.BankA.Ordem[] GetNotExecutedOrdens();
+        Supervisor.BankA.Ordem[] GetNotExecutedOrdens();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetExecutedOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetExecutedOrdensResponse")]
-        Client.BankA.Ordem[] GetExecutedOrdens();
+        Supervisor.BankA.Ordem[] GetExecutedOrdens();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetClienteOrdens", ReplyAction="http://tempuri.org/IBankAOps/GetClienteOrdensResponse")]
-        Client.BankA.Ordem[] GetClienteOrdens(int idCli);
+        Supervisor.BankA.Ordem[] GetClienteOrdens(int idCli);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/addOrdem", ReplyAction="http://tempuri.org/IBankAOps/addOrdemResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Allowed)]
@@ -374,16 +374,16 @@ namespace Client.BankA {
         void executeOrdem(int id, double value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetClientes", ReplyAction="http://tempuri.org/IBankAOps/GetClientesResponse")]
-        Client.BankA.Cliente[] GetClientes();
+        Supervisor.BankA.Cliente[] GetClientes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetCliente", ReplyAction="http://tempuri.org/IBankAOps/GetClienteResponse")]
-        Client.BankA.Cliente GetCliente(int id);
+        Supervisor.BankA.Cliente GetCliente(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetEmpresas", ReplyAction="http://tempuri.org/IBankAOps/GetEmpresasResponse")]
-        Client.BankA.Empresa[] GetEmpresas();
+        Supervisor.BankA.Empresa[] GetEmpresas();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/GetEmpresa", ReplyAction="http://tempuri.org/IBankAOps/GetEmpresaResponse")]
-        Client.BankA.Empresa GetEmpresa(int id);
+        Supervisor.BankA.Empresa GetEmpresa(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankAOps/editEmpresaValue", ReplyAction="http://tempuri.org/IBankAOps/editEmpresaValueResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Allowed)]
@@ -391,12 +391,12 @@ namespace Client.BankA {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IBankAOpsChannel : Client.BankA.IBankAOps, System.ServiceModel.IClientChannel {
+    public interface IBankAOpsChannel : Supervisor.BankA.IBankAOps, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BankAOpsClient : System.ServiceModel.ClientBase<Client.BankA.IBankAOps>, Client.BankA.IBankAOps {
+    public partial class BankAOpsClient : System.ServiceModel.ClientBase<Supervisor.BankA.IBankAOps>, Supervisor.BankA.IBankAOps {
         
         public BankAOpsClient() {
         }
@@ -425,23 +425,23 @@ namespace Client.BankA {
             base.Channel.unSubscrever();
         }
         
-        public Client.BankA.Ordem[] GetOrdens() {
+        public Supervisor.BankA.Ordem[] GetOrdens() {
             return base.Channel.GetOrdens();
         }
         
-        public Client.BankA.Ordem GetOrdem(int id) {
+        public Supervisor.BankA.Ordem GetOrdem(int id) {
             return base.Channel.GetOrdem(id);
         }
         
-        public Client.BankA.Ordem[] GetNotExecutedOrdens() {
+        public Supervisor.BankA.Ordem[] GetNotExecutedOrdens() {
             return base.Channel.GetNotExecutedOrdens();
         }
         
-        public Client.BankA.Ordem[] GetExecutedOrdens() {
+        public Supervisor.BankA.Ordem[] GetExecutedOrdens() {
             return base.Channel.GetExecutedOrdens();
         }
         
-        public Client.BankA.Ordem[] GetClienteOrdens(int idCli) {
+        public Supervisor.BankA.Ordem[] GetClienteOrdens(int idCli) {
             return base.Channel.GetClienteOrdens(idCli);
         }
         
@@ -453,19 +453,19 @@ namespace Client.BankA {
             base.Channel.executeOrdem(id, value);
         }
         
-        public Client.BankA.Cliente[] GetClientes() {
+        public Supervisor.BankA.Cliente[] GetClientes() {
             return base.Channel.GetClientes();
         }
         
-        public Client.BankA.Cliente GetCliente(int id) {
+        public Supervisor.BankA.Cliente GetCliente(int id) {
             return base.Channel.GetCliente(id);
         }
         
-        public Client.BankA.Empresa[] GetEmpresas() {
+        public Supervisor.BankA.Empresa[] GetEmpresas() {
             return base.Channel.GetEmpresas();
         }
         
-        public Client.BankA.Empresa GetEmpresa(int id) {
+        public Supervisor.BankA.Empresa GetEmpresa(int id) {
             return base.Channel.GetEmpresa(id);
         }
         
