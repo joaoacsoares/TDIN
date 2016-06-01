@@ -6,6 +6,7 @@ using System.IO;
 using System.Collections.Generic;
 using Supervisor.BankA;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Supervisor
 {
@@ -18,6 +19,8 @@ namespace Supervisor
             Program p = new Program();
             BankAOpsClient bankAProxy = new BankAOpsClient();
             bankAProxy.subscrever();
+            Form1 form = new Form1();
+            Application.Run(form);
 
             p.unstashMessages();
 
@@ -118,14 +121,14 @@ namespace Supervisor
             
 
             ordensNaoExecutadas.Clear();
-            File.WriteAllText(@"C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\persistentOrders.csv", csv.ToString());
+            File.WriteAllText(@"C:\Users\Mafalda\Documents\GitHub\TDIN\project2\Supervisor\persistentOrders.csv", csv.ToString());
             //ader.Close();
         }
 
         public void unstashMessages()
         {
             List<Ordem> tmp = new List<Ordem>();
-            var reader = new StreamReader(File.OpenRead(@"C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\persistentOrders.csv"));
+            var reader = new StreamReader(File.OpenRead(@"C:\Users\Mafalda\Documents\GitHub\TDIN\project2\Supervisor\persistentOrders.csv"));
 
             while (!reader.EndOfStream)
             {
@@ -153,7 +156,7 @@ namespace Supervisor
             {
 
                 MessageQueue messageQueue = new MessageQueue(@".\Private$\supervisor");
-
+                
 
 
                 System.Messaging.Message[] messages = messageQueue.GetAllMessages();
@@ -165,7 +168,7 @@ namespace Supervisor
                     //string line;
                     message.Formatter = new System.Messaging.XmlMessageFormatter(new String[] { });
                     StreamReader sr = new StreamReader(message.BodyStream);
-
+                    
                     while (sr.Peek() >= 0)
                     {
                         //Ordem o = new Ordem();

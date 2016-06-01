@@ -19,7 +19,7 @@ namespace Client
             listBox2.Items.Clear();
             foreach(Empresa e in proxy.GetEmpresas())
             {
-                listBox2.Items.Add(e.ID + " - avail - "+ e.stockDisponivel);
+                listBox2.Items.Add("Empresa " + e.ID + ": " + e.stockDisponivel + " Stock");
             }
 
             listBox2.Update();
@@ -65,14 +65,20 @@ namespace Client
             Cliente c = proxy.GetCliente(Int32.Parse(textBox1.Text));
             textBox5.Text = c.email;
             Ordem[] o = proxy.GetClienteOrdens(Int32.Parse(textBox1.Text));
+
+            if(o.Length == 0)
+            {
+                listBox1.Items.Add("O cliente nao tem nenhuma ordem, de momento.");
+            }
+
             foreach(Ordem ord in o)
             {
                 if(ord.state == 1)
                 {
-                    listBox1.Items.Add(ord.id.ToString() + " - executed at value - " + ord.valueStock.ToString());
+                    listBox1.Items.Add("Ordem " + ord.id + " executada com o valor " + ord.valueStock);
                 }
                 else
-                listBox1.Items.Add(ord.id.ToString() + " - not executed since - " + ord.creationDate);
+                listBox1.Items.Add("Ordem " + ord.id + " nao executada desde " + ord.creationDate);
                 
             }
             listBox1.Update();
@@ -90,7 +96,7 @@ namespace Client
             o.companyId = Int32.Parse(textBox2.Text);
            
 
-            if (comboBox1.Text == "Buying")
+            if (comboBox1.Text == "Compra")
             {
                 o.type = 0;
             }
@@ -101,6 +107,16 @@ namespace Client
             proxy.addOrdem(o.clientId, o.companyId, o.email, o.type, o.quant);
 
 
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
