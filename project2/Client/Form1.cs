@@ -14,7 +14,15 @@ namespace Client
     {
         public Form1()
         {
+            BankAOpsClient proxy = new BankAOpsClient();
             InitializeComponent();
+            listBox2.Items.Clear();
+            foreach(Empresa e in proxy.GetEmpresas())
+            {
+                listBox2.Items.Add(e.ID + " - avail - "+ e.stockDisponivel);
+            }
+
+            listBox2.Update();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -51,16 +59,23 @@ namespace Client
         {
             BankAOpsClient proxy = new BankAOpsClient();
 
-            proxy.GetClienteOrdens(Int32.Parse(textBox1.Text));
-            proxy.GetEmpresas();
-
+            /*proxy.GetClienteOrdens(Int32.Parse(textBox1.Text));
+            proxy.GetEmpresas();*/
+            listBox1.Items.Clear();
             Cliente c = proxy.GetCliente(Int32.Parse(textBox1.Text));
             textBox5.Text = c.email;
             Ordem[] o = proxy.GetClienteOrdens(Int32.Parse(textBox1.Text));
             foreach(Ordem ord in o)
             {
-                listBox1.Text = ord.id.ToString();
+                if(ord.state == 1)
+                {
+                    listBox1.Items.Add(ord.id.ToString() + " - executed at value - " + ord.valueStock.ToString());
+                }
+                else
+                listBox1.Items.Add(ord.id.ToString() + " - not executed since - " + ord.creationDate);
+                
             }
+            listBox1.Update();
 
         }
 
@@ -69,9 +84,11 @@ namespace Client
             BankAOpsClient proxy = new BankAOpsClient();
             Ordem o = new Ordem();
 
-            textBox1.Text = o.clientId.ToString();
-            textBox5.Text = o.email;
-            textBox2.Text = o.companyId.ToString();
+            
+            o.clientId = Int32.Parse(textBox1.Text);
+            o.email = textBox5.Text;
+            o.companyId = Int32.Parse(textBox2.Text);
+           
 
             if (comboBox1.Text == "Buying")
             {
@@ -80,8 +97,8 @@ namespace Client
             else
                 o.type = 1;
 
-            textBox3.Text = o.quant.ToString();
-            proxy.addOrdem(o);
+            o.quant = Int32.Parse(textBox3.Text);
+            proxy.addOrdem(o.clientId, o.companyId, o.email, o.type, o.quant);
 
 
 

@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using Client.BankA;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace Client
 {
@@ -113,7 +113,7 @@ namespace Client
 
              //TESTS END HERE*/
             //EXECUTE ORDEM 10 TEST (if ordem 10 already exists please change this)
-
+            /*
             Console.WriteLine("todas as ordens:");
             BankA.Ordem[] tmp1 = bankAProxy.GetOrdens();
             foreach (BankA.Ordem t in tmp1)
@@ -163,7 +163,7 @@ namespace Client
             
 
 
-
+    */
             bankAProxy.Close();
             
             Console.WriteLine("Press <Enter> to terminate.");

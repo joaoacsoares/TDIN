@@ -311,11 +311,18 @@ namespace BankA
                         //Console.WriteLine(o.quant);
                         o.creationDate = (string)results.GetValue(6);
                         //Console.WriteLine(o.creationDate);
-                        o.executionDate = (string)results.GetValue(7);
-                        // Console.WriteLine(o.executionDate);
-                        o.valueStock = (double)results.GetValue(8);
-                        //Console.WriteLine(o.valueStock);
                         o.state = (int)results.GetValue(9);
+                        if(o.state == 1)
+                        {
+                            o.executionDate = (string)results.GetValue(7);
+                            // Console.WriteLine(o.executionDate);
+                            o.valueStock = (double)results.GetValue(8);
+                            //Console.WriteLine(o.valueStock);
+                        }
+
+
+
+
                         //Console.WriteLine(o.state);
                         ordemList.Add(o);
                     }
@@ -420,6 +427,8 @@ namespace BankA
                            " where ID=" + id;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
+
+
                 /*if (rows == 1)
                     OperationContext.Current.SetTransactionComplete();*/
 
@@ -452,7 +461,7 @@ namespace BankA
                         //Console.WriteLine(o.ID);
                         o.stockDisponivel = (int)results.GetValue(1);
                         //Console.WriteLine(o.stockDisponivel);
-                        o.valorCotacao = (double)results.GetValue(2);
+                        //o.valorCotacao = (double)results.GetValue(2);
                         //Console.WriteLine(o.valorCotacao);
                         EmpresaList.Add(o);
                     }
