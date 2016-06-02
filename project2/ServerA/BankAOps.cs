@@ -17,6 +17,7 @@ namespace BankA
         {
             List<Ordem> ordemList = new List<Ordem>();
             SqlConnection conn = new SqlConnection(connString);
+            
             try
             {
                 conn.Open();
@@ -187,6 +188,7 @@ namespace BankA
         {
             List<Ordem> ordemList = new List<Ordem>();
             SqlConnection conn = new SqlConnection(connString);
+            
             try
             {
                 conn.Open();
@@ -287,6 +289,7 @@ namespace BankA
         {
             List<Ordem> ordemList = new List<Ordem>();
             SqlConnection conn = new SqlConnection(connString);
+            Console.WriteLine(conn);
             try
             {
                 conn.Open();

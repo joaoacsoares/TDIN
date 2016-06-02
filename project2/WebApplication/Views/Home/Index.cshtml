@@ -1,0 +1,54 @@
+﻿<ul id="ordens"></ul>
+
+<form id="saveOrdemForm" method="post">
+    <h3>Create a new Order</h3>
+    <p>
+        <label for="ClientId">ClientId:</label>
+        <input type="text" name="clientId" />
+    </p>
+    <p>
+        <label for="ClientEmail">Email:</label>
+        <input type="text" name="email" />
+    </p>
+    <p>
+        <label for="CompanyID">Company:</label>
+        <input type="text" name="companyId" />
+    </p>
+    <p>
+        <label for="type">type:</label>
+        <input type="text" name="type" />
+    </p>
+    <p>
+        <label for="quant">quantity:</label>
+        <input type="text" name="quant" />
+    </p>
+    <input type="button" id="saveOrdem" value="Save" />
+</form>
+
+
+
+@section scripts{
+    <script type="text/javascript">
+$(function()
+{
+        $.getJSON('/api/ordem', function(ordensJsonPayload)
+        {
+            $(ordensJsonPayload).each(function(i, item)
+            {
+                $('#ordens').append('<li>' + 'order number: ' + item.id + ' from user(id/email)' + item.clientId + '/' + item.email + '</li>');
+            });
+        });
+});
+
+
+$('#saveOrdem').click(function () {
+    $.post("api/ordem",
+          $("#saveOrdemForm").serialize(),
+          function (value) {
+              $('#ordens').append('<li>' +'order number: ' + value.id +' from user(id/email)'+value.clientId+'/'+ value.email + '</li>');
+          },
+          "json"
+    );
+});
+    </script>
+}
