@@ -19,10 +19,10 @@ namespace Supervisor
             Program p = new Program();
             BankAOpsClient bankAProxy = new BankAOpsClient();
             bankAProxy.subscrever();
-            Form1 form = new Form1();
+            Form1 form = new Form1(); 
             Application.Run(form);
-
-            p.unstashMessages();
+            bankAProxy.unSubscrever();
+            /*p.unstashMessages();
 
             ServiceHost host = new ServiceHost(typeof(Supervisor.SupervisorOps));
             host.Open();
@@ -88,7 +88,7 @@ namespace Supervisor
             p.stashMessages();
             bankAProxy.unSubscrever();
             Console.WriteLine("Exit Successfully.");
-            //Console.ReadLine();
+            //Console.ReadLine();*/
         }
 
 
@@ -121,14 +121,14 @@ namespace Supervisor
             
 
             ordensNaoExecutadas.Clear();
-            File.WriteAllText(@"C:\Users\Mafalda\Documents\GitHub\TDIN\project2\Supervisor\persistentOrders.csv", csv.ToString());
+            File.WriteAllText(@"C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\persistentOrders.csv", csv.ToString());
             //ader.Close();
         }
 
         public void unstashMessages()
         {
             List<Ordem> tmp = new List<Ordem>();
-            var reader = new StreamReader(File.OpenRead(@"C:\Users\Mafalda\Documents\GitHub\TDIN\project2\Supervisor\persistentOrders.csv"));
+            var reader = new StreamReader(File.OpenRead(@"C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\persistentOrders.csv"));
 
             while (!reader.EndOfStream)
             {

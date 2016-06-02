@@ -18,6 +18,6 @@ C:\Users\Mafalda\Documents\Visual Studio 2015\Projects\TDIN - Proj2\ServerA\obj\
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\bin\Debug\ServerA.exe.config
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\bin\Debug\ServerA.exe
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\bin\Debug\ServerA.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\obj\Debug\ServerA.csprojResolveAssemblyReference.cache
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\obj\Debug\ServerA.exe
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\obj\Debug\ServerA.pdb
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\ServerA\obj\Debug\ServerA.csprojResolveAssemblyReference.cache

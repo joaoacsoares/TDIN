@@ -1,8 +1,8 @@
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\bin\Debug\Client.exe.config
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\bin\Debug\Client.exe
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\bin\Debug\Client.pdb
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.exe
-C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.pdb
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.Form1.resources
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.exe
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Client\obj\Debug\Client.pdb
