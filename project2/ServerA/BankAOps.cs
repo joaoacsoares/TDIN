@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Messaging;
+using System.Net.Mail;
+using System.Net;
 
 namespace BankA
 {
@@ -418,7 +420,7 @@ namespace BankA
         public void executeOrdem(int id, double value)
         {
             SqlConnection conn = new SqlConnection(connString);
-            int rows;
+            int rows; string email = ""; string pass ="maf8507#f5#1606"; 
             DateTime localDate = DateTime.Now;
             string execDate = localDate.ToString();
             execDate = execDate.Replace(" ", "-");
@@ -444,6 +446,59 @@ namespace BankA
             {
                 conn.Close();
             }
+            try
+            {
+                conn.Open();
+                string sqlcmd = "SELECT email FROM Cliente, Ordem WHERE Ordem.IDCliente = Cliente.ID";
+                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                rows = cmd.ExecuteNonQuery();
+                using (SqlDataReader results = cmd.ExecuteReader())
+                {
+                    while (results.Read())
+                    {
+
+                        email = (string)results.GetValue(0);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+            try
+            {
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp-mail.outlook.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential("mafaldafalcaotvf@hotmail.com", pass)
+                };
+
+
+                using (var message = new MailMessage("mafaldafalcaotvf@hotmail.com", new MailAddress(email).ToString())
+                {
+                    Subject = "Execucao de Ordem",
+                    Body = "A sua ordem com o identificador " + id + " foi executada em: " + execDate
+                })
+                {
+                    smtp.Send(message);
+                    Console.WriteLine("Email Sent!");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
 
         public List<Empresa> GetEmpresas()
