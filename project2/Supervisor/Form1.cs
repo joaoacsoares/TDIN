@@ -56,5 +56,20 @@ namespace Supervisor
             proxy.executeOrdem(id, value);
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program p = new Program ();
+            p.receiveMessages();
+            listBox1.Items.Clear();
+
+            foreach (Ordem o in p.receiveMessages())
+                listBox1.Items.Add("Ordem " + o.id);
+            foreach (Ordem o in p.ordensNaoExecutadas)
+                listBox1.Items.Add("Ordem " + o.id);
+
+            listBox1.Update();
+
+        }
     }
 }

@@ -1,6 +1,7 @@
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\bin\Debug\Supervisor.exe.config
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\bin\Debug\Supervisor.exe
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\bin\Debug\Supervisor.pdb
+C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\obj\Debug\Supervisor.csprojResolveAssemblyReference.cache
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\obj\Debug\Supervisor.Form1.resources
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\obj\Debug\Supervisor.csproj.GenerateResource.Cache
 C:\Users\Joao\Documents\MIEIC\4º Ano\2S\TDIN\TDIN\project2\Supervisor\obj\Debug\Supervisor.exe
