@@ -1,31 +1,39 @@
-﻿<ul id="ordens"></ul>
+﻿
 
-<form id="saveOrdemForm" method="post">
-    <h3>Create a new Order</h3>
-    <p>
-        <label for="ClientId">ClientId:</label>
-        <input type="text" name="clientId" />
-    </p>
-    <p>
-        <label for="ClientEmail">Email:</label>
-        <input type="text" name="email" />
-    </p>
-    <p>
-        <label for="CompanyID">Company:</label>
-        <input type="text" name="companyId" />
-    </p>
-    <p>
-        <label for="type">type:</label>
-        <input type="text" name="type" />
-    </p>
-    <p>
-        <label for="quant">quantity:</label>
-        <input type="text" name="quant" />
-    </p>
-    <input type="button" id="saveOrdem" value="Save" />
-</form>
+<div class="row">
+    <div class="col-xs-6 col-md-6">
+            
+            <form id="saveOrdemForm" method="post">
+                <h3 style="margin-top:5%; margin-bottom:5%;">Create a new Order</h3>
+                <p>
+                    <label for="ClientId">ClientId:</label>
+                    <input type="text" name="clientId" />
+                </p>
+                <p>
+                    <label for="ClientEmail">Email:</label>
+                    <input type="text" name="email" />
+                </p>
+                <p>
+                    <label for="CompanyID">Company:</label>
+                    <input type="text" name="companyId" />
+                </p>
+                <p>
+                    <label for="type">type:</label>
+                    <input type="text" name="type" />
+                </p>
+                <p>
+                    <label for="quant">quantity:</label>
+                    <input type="text" name="quant" />
+                </p>
+                <input type="button" id="saveOrdem" value="Save" />
+            </form>
+        </div>
 
-
+        <h3>All My Orders</h3>
+        <ul id="ordens"></ul>
+</div> 
+                 
+             
 
 @section scripts{
     <script type="text/javascript">

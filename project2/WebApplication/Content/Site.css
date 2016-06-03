@@ -15,3 +15,12 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+ul#ordens 
+{
+   height:250px;
+   border:1px solid #ccc;
+   overflow:auto;
+    
+}
